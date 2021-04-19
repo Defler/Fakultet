@@ -1,0 +1,97 @@
+W terminalu:
+npx -v       -sprawdza wersję zainstalowanego node.js
+npx create-react-app nazwa_apl --template typescript            -tworzenie aplikacji react
+
+cd nazwa_apl       -wchodzimy do folderu aplikacji
+yarn start         -startuje aplikacje
+[ctrl+C]             -zamyka proces
+
+
+
+W pliky package.json dorzucamy w dependiences:
+    "@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",    
+    "@types/react-redux": "^7.1.8",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "reselect": "^4.0.0"
+
+
+
+Wchodzimy do folderu public i do pliku index.html
+W <head> wrzucamy:
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+
+
+W terminalu:
+yarn              -instalujemy paczki
+
+
+
+Wchodzimy do src/app.tsx
+Zalecenia:
+przy dummy componentach z funkcji usuwamy klamry a robimy nawiasy (przy const app)
+
+
+
+Tworzenie komponentów:
+zalecenie: do nowych komponentów robimy folder components w folderze src i tam tworzymy nowy plik np. CustomHeader.tsx
+
+import React from 'react';
+import logo from '../logo.svg';
+const CustomHeader = () =>
+{
+    (kopiujemy z app.tsx)
+}
+export default CustomHeader;
+
+
+
+Tworzymy component do inkrementowania liczby Counter.tsx:
+import React from 'react';
+
+interface CounterProps{
+	initialNumber?: number;
+	onNumberChange: (someNumber: number) => void;
+}
+
+const Counter: React.FC<CounterProps> = ({initialNumber, onNumberChange}) => {
+	const [counterNumber, setCounterNumber] = React.useState(props.initialNumber || 0);
+
+	const addNumber = () => {
+		const number = countNumber + 1;
+		setCounterNumber(number);
+		onNumberChange && onNumberChange(number);
+	}
+	const decreaseNumber = () => {
+		const number = counterNumber - 1;
+		setCounterNumber(number);
+		onNumberChange && onNumberChange(number);
+	}
+
+	return(
+		<div>
+			<button onClick={addNumber}>+</button>
+			{counterNumber}
+			<button onClick={decreaseNumber}>-</button>
+		</div>
+	);
+}
+export default Counter;
+
+
+
+
+
+Renderowanie rzeczy w dynamiczny sposób
+
+
+
+
+
