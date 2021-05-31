@@ -24,7 +24,7 @@ export const todosListInitialState: TodosList = {
 };
 
 export const todosStoreReducer: Reducer<TodosList, Actions> =
-    (state: TodosList = todosListInitialState, actions: Actions => {
+    (state: TodosList = todosListInitialState, actions: Actions) => {
         switch (actions.type) {
             case TodoStoreActions.SET_NEW_TODO:
                 return {
@@ -35,7 +35,7 @@ export const todosStoreReducer: Reducer<TodosList, Actions> =
                     ]
                 };
             case TodoStoreActions.SET_TODO_DONE:
-                const todoToChange: Todo | undefined = state.list.find(el => el.id === actions.payload.id)
+                const todoToChange: Todo | undefined = state.list.find(el => el.id === actions.payload.id);
                 if (todoToChange) {
                     todoToChange.done = true
                     return {
