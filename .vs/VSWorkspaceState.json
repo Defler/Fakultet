@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\aplikacja",
-    "\\aplikacja\\src",
-    "\\aplikacja\\src\\components"
+    "\\aplikacja\\public",
+    "\\aplikacja\\src"
   ],
-  "SelectedNode": "\\aplikacja\\src\\components\\NavPanel.tsx",
+  "SelectedNode": "\\aplikacja\\src\\views",
   "PreviewInSolutionExplorer": false
 }
