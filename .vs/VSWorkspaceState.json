@@ -2,9 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\aplikacja",
-    "\\aplikacja\\public",
-    "\\aplikacja\\src"
+    "\\aplikacja\\src",
+    "\\aplikacja\\src\\components",
+    "\\aplikacja\\src\\services",
+    "\\aplikacja\\src\\utils",
+    "\\aplikacja\\src\\views",
+    "\\aplikacja\\src\\views\\home",
+    "\\aplikacja\\src\\views\\movie"
   ],
-  "SelectedNode": "\\aplikacja\\src\\views",
+  "SelectedNode": "\\aplikacja\\src\\key.ts",
   "PreviewInSolutionExplorer": false
 }
