@@ -1,4 +1,4 @@
-# Fakultet
+# Fakultet - Projekt React.js
 Patryk Redykiert
 
 Jakub Przyborowski
